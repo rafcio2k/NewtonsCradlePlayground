@@ -1,12 +1,12 @@
 import UIKit
-import XCPlayground
+import PlaygroundSupport
 /*:
 ## Newton's Cradle and UIKit Dynamics
 This playground uses **UIKit Dynamics** to create a [Newton's Cradle](https://en.wikipedia.org/wiki/Newton%27s_cradle). Commonly seen on desks around the world, Newton's Cradle is a device that illustrates conservation of momentum and energy.
  
 Let's create an instance of our UIKit Dynamics based Newton's Cradle. Try adding more colors to the array to increase the number of balls in the device.
 */
-let newtonsCradle = NewtonsCradle(colors: [[#Color(colorLiteralRed: 0.8779790997505188, green: 0.3812967836856842, blue: 0.5770481824874878, alpha: 1)#], [#Color(colorLiteralRed: 0.2202886641025543, green: 0.7022308707237244, blue: 0.9593387842178345, alpha: 1)#], [#Color(colorLiteralRed: 0.9166661500930786, green: 0.4121252298355103, blue: 0.2839399874210358, alpha: 1)#], [#Color(colorLiteralRed: 0.521954357624054, green: 0.7994346618652344, blue: 0.3460423350334167, alpha: 1)#]])
+let newtonsCradle = NewtonsCradle(colors: [#colorLiteral(red: 0.8779790997505188, green: 0.3812967836856842, blue: 0.5770481824874878, alpha: 1), #colorLiteral(red: 0.2202886641025543, green: 0.7022308707237244, blue: 0.9593387842178345, alpha: 1), #colorLiteral(red: 0.9166661500930786, green: 0.4121252298355103, blue: 0.2839399874210358, alpha: 1), #colorLiteral(red: 0.521954357624054, green: 0.7994346618652344, blue: 0.3460423350334167, alpha: 1)])
 /*:
 ### Size and spacing
 Try changing the size and spacing of the balls and see how that changes the device. What happens if you make `ballPadding` a negative number?
@@ -39,4 +39,4 @@ for attachmentBehavior in newtonsCradle.attachmentBehaviors {
     attachmentBehavior.length = 100
 }
 
-XCPlaygroundPage.currentPage.liveView = newtonsCradle
+PlaygroundPage.current.liveView = newtonsCradle
